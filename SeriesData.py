@@ -9,11 +9,9 @@ import urllib
 import json
 import datetime
 import time
-
 import requests
 
 def read_Data():
-
     link = "http://www.bloomberght.com/piyasa/intradaydata/dolar"
     data = requests.get(link)
     lastProduct =[]
@@ -26,7 +24,6 @@ def read_Data():
         arrangedData.append(seriesData[i][1]) # get exchange rate
         lastProduct.append(arrangedData)
         i += 1
-
     return lastProduct
 
 def createHtmlFile(data):
